@@ -1,26 +1,28 @@
-# SUJET
+# SUBJECT
 
-Que de temps perdu à comprendre pourquoi le formulaire soumis est incorrect ! Pourquoi pouvoir cliquer si les infos ne sont pas valides ?
+What a waste of time trying to figure out why the submitted form is incorrect! Why should I be able to click if the information is not valid?
 
-Voilà typiquement les remontrances habituelles des utilisateurs énervés après un échec de soumission de formulaire.
+These are the usual complaints from angry users after a failed form submission.
 
-Mais que faire ? Cacher le bouton "Submit" ? Le griser ?...
+But what to do? Hide the "Submit" button? Grey it out?
 
-Vous pouvez trouver mieux que ça !
+You can do better than that!
 
-Proposez de nouvelles méthodes fun et originales pour guider l'expérience utilisateur tout en lui donnant le sourire !
+Come up with new, fun and original ways to guide the user experience while making them smile!
 
-A vous de jouer ! Tout est permis !
+It's up to you! Anything goes!
 
-# ÉLÉMENTS ATTENDUS
+# EXPECTED ELEMENTS
 
- Objectif principal :
+ Main objective:
 
-Effectuer un contrôle des saisies de l’utilisateur et l’empêcher de soumettre le formulaire par un moyen original en mettant en évidence le (ou les) champ erroné
- Critères d’évaluation :
+Perform a check of the user's input and prevent them from submitting the form in an original way by highlighting the incorrect field(s)
+ Evaluation Criteria:
 
-L’expérience utilisateur au travers de l’originalité, l’efficacité et l’esthétique de la solution proposée.
+User experience through the originality, efficiency and aesthetics of the proposed solution.
 
+
+Translated with www.DeepL.com/Translator (free version)
 
 # Getting Started with Create React App
 
