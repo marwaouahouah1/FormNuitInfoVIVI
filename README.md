@@ -1,3 +1,27 @@
+# SUJET
+
+Que de temps perdu à comprendre pourquoi le formulaire soumis est incorrect ! Pourquoi pouvoir cliquer si les infos ne sont pas valides ?
+
+Voilà typiquement les remontrances habituelles des utilisateurs énervés après un échec de soumission de formulaire.
+
+Mais que faire ? Cacher le bouton "Submit" ? Le griser ?...
+
+Vous pouvez trouver mieux que ça !
+
+Proposez de nouvelles méthodes fun et originales pour guider l'expérience utilisateur tout en lui donnant le sourire !
+
+A vous de jouer ! Tout est permis !
+
+# ÉLÉMENTS ATTENDUS
+
+ Objectif principal :
+
+Effectuer un contrôle des saisies de l’utilisateur et l’empêcher de soumettre le formulaire par un moyen original en mettant en évidence le (ou les) champ erroné
+ Critères d’évaluation :
+
+L’expérience utilisateur au travers de l’originalité, l’efficacité et l’esthétique de la solution proposée.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
