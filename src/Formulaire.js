@@ -1,4 +1,4 @@
-import React, {useState} from 'react';
+import React from 'react';
 import './Formulaire.css';
 function Formulaire(){
 
@@ -14,6 +14,7 @@ function Formulaire(){
             <input type="email" name="email_address"/>
             <p><button>Submit Booking</button></p>
         </form>
+        <div><img src="C:/Users/marwa/OneDrive/Images/mo.png" alt='hell'/></div>
        </div>
        </>
 	)
