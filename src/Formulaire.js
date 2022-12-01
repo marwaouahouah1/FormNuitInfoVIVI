@@ -1,11 +1,15 @@
 import React from 'react';
 import './Formulaire.css';
+import ditto from './dittoGif.gif';
 function Formulaire(){
 
 	return(
     <><div className='app'>
-            <title>Welcome to Ditto's formu</title>
-        <form class="myForm" method="get">
+           
+            <img src={ditto} alt='hello'/> 
+            <span>Welcome to Ditto's formu</span><br></br>
+        <form class="myForm" method="get"> 
+           
             <label>Name</label>
             <input type="text" name="customer_name" required/>
             <label>Phone</label>
@@ -14,7 +18,7 @@ function Formulaire(){
             <input type="email" name="email_address"/>
             <p><button>Submit Booking</button></p>
         </form>
-        <div><img src="C:/Users/marwa/OneDrive/Images/mo.png" alt='hell'/></div>
+        
        </div>
        </>
 	)
