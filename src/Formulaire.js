@@ -11,6 +11,9 @@ function Formulaire(){
     const onSubmit = (data) => {
         console.log(data);
     };
+    const good = () => {
+        window.alert('Votre formulaire a bien été envoyé.')
+      };
     const passage = ()=>{
         if(nb==3){handleCorrect(true);
             console.log("passage");}
@@ -76,7 +79,7 @@ function Formulaire(){
                                     /><br></br><br></br>
                         </Form.Field>
                         {errors.phoneNumber && <p>Renseignez votre numéro de téléphone</p>}
-                        {correct ? (<Button type='submit'>Valider</Button>):
+                        {correct ? (<Button type='submit' onClick={good}>Valider</Button>):
                         (<img class="d" src={ditto} alt='hello'/> )}
                     </Form>
                     </div>
