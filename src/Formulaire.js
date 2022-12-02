@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { useForm } from "react-hook-form";
 import { Form, Button } from 'semantic-ui-react';
 
@@ -6,9 +6,18 @@ import './Formulaire.css';
 import ditto from './dittoGif.gif';
 function Formulaire(){
     const { register, handleSubmit, formState: { errors } } = useForm();
+    const [ correct, handleCorrect]= useState(false);
+    const [nb, handlenb]= useState(0);
     const onSubmit = (data) => {
         console.log(data);
+    };
+    const passage = ()=>{
+        if(nb==3){handleCorrect(true);
+            console.log("passage");}
+            console.log(nb);
+        console.log("pas passage");
     }
+    
     return (
         <div>
             <div class="app">
@@ -16,7 +25,7 @@ function Formulaire(){
                 <centre><span>Welcome to Ditto's form</span></centre><br></br>
                 </div>
                 <div class="form">
-                    <div class="formulaire">
+                    <div class="formulaire" onChange={()=>passage()}>
                     <Form onSubmit={handleSubmit(onSubmit)}>
                         <Form.Field>
                             <label>Prenom   </label>
@@ -24,17 +33,20 @@ function Formulaire(){
                                 name="firstName" 
                                 placeholder='Prénom'
                                 {...register("firstName", { required: true, maxLength: 10 })}
+                                onChange={()=>handlenb(1)}
                             /><br></br><br></br>
                             
                         </Form.Field>
-                        {errors.firstName && <p>Renseignez votre prénom !</p>}
+                        {errors.firstName && <p>Renseignez votre prénom !</p>
+                        }
                         <Form.Field>
                             <label>Nom   </label>
                             <input
-                                placeholder='Nom de famille'
+                                placeholder='Nom'
                                 type="text"
                                 name="lastName"
-                                {...register("lastName", { required: true, maxLength: 10 })}
+                                {...register("lastName", { required: true, maxLength: 15 })}
+                                onChange={()=>handlenb(2)}
                             /><br></br><br></br>
                         </Form.Field>
                         {errors.lastName && <p>Renseignez votre nom de famille !</p>}
@@ -47,8 +59,9 @@ function Formulaire(){
                                 {...register("email",
                                     {
                                         required: true,
-                                        pattern: /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/
+                                        pattern: "[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$"
                                     })}
+                                    onChange={()=>handlenb(3)}
                             /><br></br><br></br>
                         </Form.Field>
                         {errors.email && <p>Renseignez votre email !</p>}
@@ -58,11 +71,13 @@ function Formulaire(){
                                         type="tel" 
                                         name="phoneNumber"
                                         placeholder='Numéro de téléphone'
-                                        {...register("phoneNumber", { required: true, maxLength: 10 })}
+                                        {...register("phoneNumber", { required: true, valueAsNumber: true })}
+                                        onChange={()=>handlenb(4)}
                                     /><br></br><br></br>
                         </Form.Field>
                         {errors.phoneNumber && <p>Renseignez votre numéro de téléphone</p>}
-                        <img class="d" src={ditto} alt='hello'/> 
+                        {correct ? (<Button type='submit'>Valider</Button>):
+                        (<img class="d" src={ditto} alt='hello'/> )}
                     </Form>
                     </div>
                 </div>
